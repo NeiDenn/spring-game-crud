@@ -6,7 +6,7 @@ Spring CRUD es una demostración de cómo implementar operaciones CRUD simples c
 El proyecto se crea con Maven y Java17, por lo que solo necesita importarlo a su IDE y compilar el proyecto para resolver las dependencias.
 
 ## Database configuration 
-Ejecuta la base de datos MySQL con el nombre `bd_games_jpa` que se encuentra en `/src/main/resources/bd_mysql` y estas credenciales para `/resources/application.properties` los predeterminados son:
+Ejecute la base de datos MySQL con el nombre `bd_games_jpa` que se encuentra en `/src/main/resources/bd_mysql` y estas credenciales para `/resources/application.properties`. No olvide verificar su contraseña, los predeterminados son:
 
 ```
 server.port=8091
@@ -35,10 +35,10 @@ Ejecute el proyecto y diríjase a [http://localhost:8091](http://localhost:8091)
 - Registro
 - Actualización
 - Eliminación
-- Busqueda
+- Búsqueda
 - Mensajes De Alerta
 - Validaciones
-- Menu
+- Menú 
 - Etc.
 
 ## Contributing
