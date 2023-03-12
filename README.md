@@ -1,9 +1,9 @@
 # spring-crud-jpa
 
-Spring CRUD es una demostración de cómo implementar operaciones CRUD simples con las entidades, Juego, Genero y Desarrolladora
+Spring CRUD es una demostración de cómo implementar operaciones CRUD simples con las entidades Juego, Genero y Desarrolladora
 
 ## Installation 
-El proyecto se crea con Maven, por lo que solo necesita importarlo a su IDE y compilar el proyecto para resolver las dependencias.
+El proyecto se crea con Maven y Java17, por lo que solo necesita importarlo a su IDE y compilar el proyecto para resolver las dependencias.
 
 ## Database configuration 
 Ejecuta la base de datos MySQL con el nombre `bd_games_jpa` que se encuentra en `/src/main/resources/bd_mysql` y estas credenciales para `/resources/application.properties` los predeterminados son:
