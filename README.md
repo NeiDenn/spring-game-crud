@@ -21,23 +21,13 @@ spring.datasource.password=mysql
 ## Usage 
 Ejecute el proyecto y diríjase a [http://localhost:8091](http://localhost:8091)
 
-A little intro about the installation. 
+En caso si Spring no reconoce los datasource de tu `application.properties`, es raro pero suele pasar, siga estas instrucciones. 
 ```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
+$ Click derecho al proyecto > Maven > Update Project > Click Ok
+$ Click derecho al proyecto > Close Project
+$ Click derecho al proyecto > Open Project
+$ Y ejecute el proyecto
 ```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## Collaboration
-***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
-## FAQs
-***
-
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/85379478/224551383-93381407-c579-4cf2-86d4-46c29383f6fc.png)
 ![image](https://user-images.githubusercontent.com/85379478/224550934-d6340531-2542-4f92-9ab2-22fd6cc05c78.png)
