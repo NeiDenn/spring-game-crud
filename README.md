@@ -23,10 +23,10 @@ Ejecute el proyecto y diríjase a [http://localhost:8091](http://localhost:8091)
 
 En caso si Spring no reconoce los datasource de tu `application.properties`, es raro pero suele pasar, siga estas instrucciones. 
 ```
-$ Click derecho al proyecto > Maven > Update Project > Click Ok
-$ Click derecho al proyecto > Close Project
-$ Click derecho al proyecto > Open Project
-$ Y ejecute el proyecto
+1. Click derecho al proyecto > Maven > Update Project > Click Ok
+2. Click derecho al proyecto > Close Project
+3. Click derecho al proyecto > Open Project
+4. Y ejecute el proyecto
 ```
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/85379478/224551383-93381407-c579-4cf2-86d4-46c29383f6fc.png)
