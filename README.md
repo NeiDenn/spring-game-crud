@@ -30,7 +30,7 @@ En caso si Spring no reconoce los datasource de tu `application.properties`, es 
 ```
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/85379478/224551383-93381407-c579-4cf2-86d4-46c29383f6fc.png)
-![image](https://user-images.githubusercontent.com/85379478/225435582-319e4625-464f-4aa8-9cba-66fe71e54116.png)
+![image](https://user-images.githubusercontent.com/85379478/225435855-59e1a66a-ed26-44ae-aa05-019b0683a076.png)
 ![image](https://user-images.githubusercontent.com/85379478/224550934-d6340531-2542-4f92-9ab2-22fd6cc05c78.png)
 ![image](https://user-images.githubusercontent.com/85379478/224551213-b9475cd7-487d-47fe-aee7-96f7fbac5714.png)
 ![image](https://user-images.githubusercontent.com/85379478/224551056-7ac47035-b742-41e7-8598-f9d5770ef6d8.png)
