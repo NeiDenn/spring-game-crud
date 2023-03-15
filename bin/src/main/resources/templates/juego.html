@@ -30,18 +30,19 @@
 
 <body>
 	
-	<!-- header -->
+	<!-- barra de navegacion -->
 	<div class="bg-dark">
 		<nav class="container navbar mb-4">
 			<div class="container-fluid">
 				<!-- brand -->
-				<a class="navbar-brand text-light fw-bold">GAME-PROJECT</a>
+				<a class="navbar-brand text-light fw-bold" title="Pagina de inicio NDMM">GAME-PROJECT</a>
 				<!-- links -->
 				<a th:href="@{/index}" class="text-decoration-none btn btn-sm btn-outline-light px-5 rounded">Inicio</a>
 				<a th:href="@{/juego/lista}" class="text-decoration-none btn btn-sm btn-outline-light px-5 rounded">Mantenimiento Juego</a>			
 				<!-- search -->
 				<form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+					<input class="form-control me-2" type="search" placeholder="Buscar..."
+						aria-label="Search">
 					<a class="btn btn-success">Buscar</a>
 				</form>
 			</div>
@@ -144,7 +145,7 @@
 					<div class="container bg-light">
 						<div class="row justify-content-center">
 							<!-- form-->
-							<form id="CreateForm" th:action="@{/juego/grabar}" method="post" class="my-3 row">
+							<form id="CreateForm" action="/juego/grabar" method="post" class="my-3 row">
 
 								<div class="mb-3 col-md-3">
 									<label class="col-form-label">Código</label>
@@ -162,7 +163,7 @@
 									</div>
 								</div>
 
-								<div class="mb-3 col-md-9">
+								<div class="mb-3 col-md-8">
 									<label class="col-form-label">Descripción <span class="text-danger">*</span></label>
 									<div>
 										<textarea class="form-control border-secondary text_justify" rows="3" id="txtDescripcion" name="txtDescripcion" 
@@ -170,7 +171,7 @@
 									</div>
 								</div>	
 								
-								<div class="mb-3 col-md-3">
+								<div class="mb-3 col-md-4">
 									<label class="col-form-label">Precio S/. <span class="text-danger">*</span></label>
 									<div>
 										<input type="text" class="form-control border-secondary" name="txtPrecio" id="txtPrecio" placeholder="Ej: 60" 
@@ -212,12 +213,14 @@
 				
 				<!-- button save and update -->
 				<div class="modal-footer d-flex align-items-center justify-content-evenly bg-dark">
-					<button class="btn btn-outline-success fw-bold px-5" type="submit"
-						form="CreateForm">Guardar Cambios</button>
-					<button class="btn btn-outline-danger fw-bold px-5"
-						data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+					<button class="btn btn-outline-success fw-bold px-5" type="submit" form="CreateForm">
+						Guardar Cambios
+					</button>
+					<button class="btn btn-outline-danger fw-bold px-5" data-bs-dismiss="modal" aria-label="Close">
+						Cancelar
+					</button>					
 				</div>
-
+				
 			</div>
 		</div>
 	</div>
@@ -225,13 +228,18 @@
 	
 
 	<!-- bootstrap-js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
     <!-- jQuery necesario para actualizar, eliminar y dataTables !important -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
+    <!-- datatables-requiere-jQuery. -->    
+  	 <!--  --> 
     <!-- datatables-js -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.js"></script>
     <!-- datatables-language -->
     <script type="text/javascript" src="/resources/js/datatables-language.js"></script>
+	
 	
 
 	<!-- function-actualizar -->

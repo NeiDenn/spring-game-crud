@@ -1,0 +1,58 @@
+-- drop database if exists bd_games_jpa;
+create database bd_games_jpa;
+use bd_games_jpa;
+
+-- tables
+create table tb_genero(
+cod_gen int primary key auto_increment,
+nom_gen varchar(70)
+);
+
+create table tb_desarrolladora(
+cod_des int primary key auto_increment,
+nom_des varchar(70)
+);
+
+create table tb_juego(
+cod_jue int primary key auto_increment,
+tit_jue varchar(70), -- title
+des_jue varchar(255), -- description
+pre_jue decimal(5,2), -- price
+fec_lan_jue date, -- fecha_lanzamiento
+cod_gen int,
+cod_des int,
+foreign key(cod_gen) references tb_genero(cod_gen),
+foreign key(cod_des) references tb_desarrolladora(cod_des)
+);
+
+-- inserts
+insert into tb_genero values
+(1, 'Aventura'),
+(2, 'Deportes'),
+(3, 'Estrategia'),
+(4, 'Arcade'),
+(5, 'Terror');
+
+insert into tb_desarrolladora values
+(1, 'Tencent Games'),
+(2, 'Riot Games'),
+(3, 'Sony'),
+(4, 'Ubisoft'),
+(5, 'Activision Blizzard');
+
+insert into tb_juego values
+(1, 'Red Dead Redemption 2', 'Es la secuela del aclamado Red Dead Redemption de 2010 y tercera parte de la saga Red Dead, que se inició en 2004 con Red Dead Revolver. De nuevo nos lleva al salvaje para ponernos en el escenario de mundo abierto más grande jamás creado.', 
+119.00, '2021-06-11', 1, 3),
+(2, 'Elden Ring', 'Es el nuevo videojuego de FromSoftware, creadores de Dark Souls, Sekiro o Bloodborne. Se trata del nuevo título de acción y rol para un jugador ideado por Hidetaka Miyazaki, que en esta ocasión, estrenará un mundo abierto más grande y ambicioso.', 
+79.00, '2022-02-20', 2, 2),
+(3, 'God of War: Ragnarok', 'Es la secuela de God of War, el reinicio y a la vez secuela de los anteriores God of War para consolas PlayStation. Desarrollado por el prestigioso estudio Sony Santa Monica y con la dirección de Cory Barlog.',
+55.00, '2021-07-02', 3, 1),
+(4, 'Persona 5 Royal', 'Es la versión extendida y mejorada del exitoso videojuego del rol japonés producido por ATLUS para consolas. La quinta entrega tiene ahora una nueva edición que, si bien nos sigue contando una épica historia en la que un grupo de estudiantes adolescentes', 
+89.00, '2021-02-13', 4, 4);
+
+-- query
+select * from tb_genero;
+select * from tb_desarrolladora;
+select * from tb_juego;
+
+
