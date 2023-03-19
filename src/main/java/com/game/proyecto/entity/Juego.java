@@ -16,7 +16,7 @@ import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "tb_juego")
-public class JuegoDTO {
+public class Juego {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,12 +40,12 @@ public class JuegoDTO {
 	// many to one
 	@ManyToOne
 	@JoinColumn(name = "cod_gen")
-	private GeneroDTO juegoGenero;
+	private Genero juegoGenero;
 	
 	// many to one
 	@ManyToOne
 	@JoinColumn(name = "cod_des")
-	private DesarrolladoraDTO juegoDesarrolladora;
+	private Desarrolladora juegoDesarrolladora;
 
 	// getters and setters
 	public Integer getCodJue() {
@@ -88,25 +88,25 @@ public class JuegoDTO {
 		this.fecLanJue = fecLanJue;
 	}
 
-	public GeneroDTO getJuegoGenero() {
+	public Genero getJuegoGenero() {
 		return juegoGenero;
 	}
 
-	public void setJuegoGenero(GeneroDTO juegoGenero) {
+	public void setJuegoGenero(Genero juegoGenero) {
 		this.juegoGenero = juegoGenero;
 	}
 
-	public DesarrolladoraDTO getJuegoDesarrolladora() {
+	public Desarrolladora getJuegoDesarrolladora() {
 		return juegoDesarrolladora;
 	}
 
-	public void setJuegoDesarrolladora(DesarrolladoraDTO juegoDesarrolladora) {
+	public void setJuegoDesarrolladora(Desarrolladora juegoDesarrolladora) {
 		this.juegoDesarrolladora = juegoDesarrolladora;
 	}
 
 	// constructors
-	public JuegoDTO(Integer codJue, String titJue, String desJue, BigDecimal preJue, Date fecLanJue,
-			GeneroDTO juegoGenero, DesarrolladoraDTO juegoDesarrolladora) {
+	public Juego(Integer codJue, String titJue, String desJue, BigDecimal preJue, Date fecLanJue,
+			Genero juegoGenero, Desarrolladora juegoDesarrolladora) {
 		super();
 		this.codJue = codJue;
 		this.titJue = titJue;
@@ -117,7 +117,7 @@ public class JuegoDTO {
 		this.juegoDesarrolladora = juegoDesarrolladora;
 	}
 
-	public JuegoDTO() {
+	public Juego() {
 		super();
 	}
 }

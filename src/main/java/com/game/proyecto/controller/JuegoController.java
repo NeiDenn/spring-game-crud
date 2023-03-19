@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.game.proyecto.entity.DesarrolladoraDTO;
-import com.game.proyecto.entity.GeneroDTO;
-import com.game.proyecto.entity.JuegoDTO;
+import com.game.proyecto.entity.Desarrolladora;
+import com.game.proyecto.entity.Genero;
+import com.game.proyecto.entity.Juego;
 import com.game.proyecto.service.DesarrolladoraService;
 import com.game.proyecto.service.GeneroService;
 import com.game.proyecto.service.JuegoService;
@@ -36,11 +36,11 @@ public class JuegoController {
 	public String inicio(Model model) {
 		
 		// recuperar list of games
-		List<JuegoDTO> dataJuego = serviJuego.listaJuegos();
+		List<Juego> dataJuego = serviJuego.listaJuegos();
 		// recuperar list genre para form-select
-		List<GeneroDTO> dataGenero = serviGenero.listaGeneros();
+		List<Genero> dataGenero = serviGenero.listaGeneros();
 		// recuperar list desarrolladora para form-select
-		List<DesarrolladoraDTO> dataDesarrolladora = serviDesarrolladora.listaDesarrolladoras();
+		List<Desarrolladora> dataDesarrolladora = serviDesarrolladora.listaDesarrolladoras();
 		
 		// atributos para enviar al html
 		model.addAttribute("listaJuegos", dataJuego);
@@ -60,7 +60,7 @@ public class JuegoController {
 
 		try {
 			// object
-			JuegoDTO objJuego= new JuegoDTO();
+			Juego objJuego= new Juego();
 
 			// set
 			objJuego.setCodJue(cod);
@@ -71,9 +71,9 @@ public class JuegoController {
 			objJuego.setFecLanJue(new SimpleDateFormat("yyyy-MM-dd").parse(fec));
 
 			// create objects
-			GeneroDTO objGenero = new GeneroDTO();
+			Genero objGenero = new Genero();
 			objGenero.setCodGen(genero);
-			DesarrolladoraDTO objDesarrolladora = new DesarrolladoraDTO();
+			Desarrolladora objDesarrolladora = new Desarrolladora();
 			objDesarrolladora.setCodDes(desarrolladora);
 
 			// send object
@@ -100,16 +100,15 @@ public class JuegoController {
 			e.printStackTrace();
 		}
 		
-		// return "".html
 		return "redirect:/juego/lista";
 	}
 	
 	// search x cod
 	@RequestMapping("/buscar")
 	@ResponseBody
-	public JuegoDTO buscar(@RequestParam("buscarCodigo") int cod) {
+	public Juego buscar(@RequestParam("buscarCodigo") int cod) {
 		// call method search
-		JuegoDTO objJuego = serviJuego.buscar(cod);
+		Juego objJuego = serviJuego.buscar(cod);
 		
 		return objJuego;
 	}
@@ -119,7 +118,7 @@ public class JuegoController {
 	public String eliminar(@RequestParam("buscarCodigo") int cod, RedirectAttributes redirect) {
 
 		// object
-		JuegoDTO objJuego = new JuegoDTO();
+		Juego objJuego = new Juego();
 		objJuego.setCodJue(cod);
 
 		try {
@@ -133,7 +132,6 @@ public class JuegoController {
 			e.printStackTrace();
 		}
 
-		// retornar "".html
 		return "redirect:/juego/lista";
 	}
 }

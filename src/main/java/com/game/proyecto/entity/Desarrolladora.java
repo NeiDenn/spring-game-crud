@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_desarrolladora")
-public class DesarrolladoraDTO {
+public class Desarrolladora {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,7 @@ public class DesarrolladoraDTO {
 	@JsonIgnore
 	// one to many
 	@OneToMany(mappedBy = "juegoDesarrolladora")
-	private List<JuegoDTO> listaJuegos;
+	private List<Juego> listaJuegos;
 
 	// getters and setters
 	public Integer getCodDes() {
@@ -48,23 +48,23 @@ public class DesarrolladoraDTO {
 		this.nomDes = nomDes;
 	}
 
-	public List<JuegoDTO> getListaJuegos() {
+	public List<Juego> getListaJuegos() {
 		return listaJuegos;
 	}
 
-	public void setListaJuegos(List<JuegoDTO> listaJuegos) {
+	public void setListaJuegos(List<Juego> listaJuegos) {
 		this.listaJuegos = listaJuegos;
 	}
 
 	// constructors
-	public DesarrolladoraDTO(Integer codDes, String nomDes, List<JuegoDTO> listaJuegos) {
+	public Desarrolladora(Integer codDes, String nomDes, List<Juego> listaJuegos) {
 		super();
 		this.codDes = codDes;
 		this.nomDes = nomDes;
 		this.listaJuegos = listaJuegos;
 	}
 
-	public DesarrolladoraDTO() {
+	public Desarrolladora() {
 		super();
 	}
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.game.proyecto.entity.GeneroDTO;
+import com.game.proyecto.entity.Genero;
 import com.game.proyecto.repository.GeneroRepository;
 
 @Service
@@ -15,8 +15,8 @@ public class GeneroService {
 	@Autowired
 	private GeneroRepository repoGenero;
 	
-	// list for form-select(combito)
-	public List<GeneroDTO> listaGeneros(){
+	// list for form-select
+	public List<Genero> listaGeneros(){
 		return repoGenero.findAll();
 	}
 

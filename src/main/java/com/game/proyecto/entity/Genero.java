@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_genero")
-public class GeneroDTO {
+public class Genero {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,7 @@ public class GeneroDTO {
 	@JsonIgnore
 	// one to many
 	@OneToMany(mappedBy = "juegoGenero")
-	private List<JuegoDTO> listaJuegos;
+	private List<Juego> listaJuegos;
 
 	// getters and setters
 	public Integer getCodGen() {
@@ -48,23 +48,23 @@ public class GeneroDTO {
 		this.nomGen = nomGen;
 	}
 
-	public List<JuegoDTO> getListaJuegos() {
+	public List<Juego> getListaJuegos() {
 		return listaJuegos;
 	}
 
-	public void setListaJuegos(List<JuegoDTO> listaJuegos) {
+	public void setListaJuegos(List<Juego> listaJuegos) {
 		this.listaJuegos = listaJuegos;
 	}
 
 	// constructors
-	public GeneroDTO(Integer codGen, String nomGen, List<JuegoDTO> listaJuegos) {
+	public Genero(Integer codGen, String nomGen, List<Juego> listaJuegos) {
 		super();
 		this.codGen = codGen;
 		this.nomGen = nomGen;
 		this.listaJuegos = listaJuegos;
 	}
 
-	public GeneroDTO() {
+	public Genero() {
 		super();
 	}
 }

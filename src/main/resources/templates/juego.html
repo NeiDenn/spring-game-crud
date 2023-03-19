@@ -84,16 +84,16 @@
 
     <!-- container-table -->
     <div class="container mt-3 mb-5">
-        <table id="datatable-spanish" class="table table-striped table-borderless py-2 border border-0 shadow">
-            <thead class="table-info">
+        <table id="datatable-spanish" class="table table-striped table-bordered py-2">
+            <thead class="table-primary">
                 <tr>
-                    <th class="text-center">Código</th>
-                    <th class="text-center">Título</th>
-                    <th class="text-center">Descripcion</th>
-                    <th class="text-center">Precio</th>
-                    <th class="text-center">Fecha</th>
-                    <th class="text-center">Genero</th>
-                    <th class="text-center">Desarrolladora</th>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Fecha</th>
+                    <th>Genero</th>
+                    <th>Desarrolladora</th>
                     <th class="text-center">Opciones</th>
                 </tr>
             </thead>
@@ -101,13 +101,13 @@
             <tbody>
             <!-- recuperar el atributo list... del controller -->
                 <tr th:each="row:${listaJuegos}">
-                    <td th:text="${row.codJue}" class="text-center"></td>
-                    <td th:text="${row.titJue}" class="text-center"></td>
-                    <td th:text="${row.desJue}" class="text-center text_cut"></td>
-                    <td th:text="${row.preJue}" class="text-center"></td>
-                    <td th:text="${row.fecLanJue}" class="text-center"></td>
-                    <td th:text="${row.juegoGenero.nomGen}" class="text-center"></td>
-                    <td th:text="${row.juegoDesarrolladora.nomDes}" class="text-center"></td>
+                    <td th:text="${row.codJue}"></td>
+                    <td th:text="${row.titJue}"></td>
+                    <td th:text="${row.desJue}" class="text_cut"></td>
+                    <td th:text="${row.preJue}"></td>
+                    <td th:text="${row.fecLanJue}"></td>
+                    <td th:text="${row.juegoGenero.nomGen}"></td>
+                    <td th:text="${row.juegoDesarrolladora.nomDes}"></td>
                     <td class="d-flex align-items-center justify-content-evenly">
                         <!-- button update -->
                         <a class="btn btn-sm btn-primary border-0 btn-editar" data-bs-toggle="modal" data-bs-target="#exampleModalGrabar">

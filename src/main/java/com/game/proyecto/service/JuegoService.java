@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.game.proyecto.entity.JuegoDTO;
+import com.game.proyecto.entity.Juego;
 import com.game.proyecto.repository.JuegoRepository;
 
 @Service
@@ -16,17 +16,17 @@ public class JuegoService {
 	private JuegoRepository repoJuego;
 	
 	// list
-	public List<JuegoDTO> listaJuegos(){
+	public List<Juego> listaJuegos(){
 		return repoJuego.findAll();
 	}
 	
 	// save and update
-	public void grabar(JuegoDTO bean) {
+	public void grabar(Juego bean) {
 		repoJuego.save(bean);
 	}
 	
 	// search
-	public JuegoDTO buscar(Integer cod) {
+	public Juego buscar(Integer cod) {
 		return repoJuego.findById(cod).orElse(null);
 	}
 	
