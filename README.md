@@ -30,6 +30,7 @@ En caso si Spring no reconoce los datasource de tu `application.properties`, es 
 ```
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/85379478/224551383-93381407-c579-4cf2-86d4-46c29383f6fc.png)
+![image](https://user-images.githubusercontent.com/85379478/225436000-aa64b10a-e2dc-401a-93c7-6ca8ed03688e.png)
 ![image](https://user-images.githubusercontent.com/85379478/224550934-d6340531-2542-4f92-9ab2-22fd6cc05c78.png)
 ![image](https://user-images.githubusercontent.com/85379478/224551213-b9475cd7-487d-47fe-aee7-96f7fbac5714.png)
 ![image](https://user-images.githubusercontent.com/85379478/224551056-7ac47035-b742-41e7-8598-f9d5770ef6d8.png)
@@ -45,6 +46,7 @@ En caso si Spring no reconoce los datasource de tu `application.properties`, es 
 - Búsqueda
 - Mensajes De Alerta
 - Validaciones
+- Contador de registros disponibles
 - Menú 
 - Etc.
 
